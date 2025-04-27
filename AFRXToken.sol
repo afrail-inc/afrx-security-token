@@ -1,13 +1,17 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "@openzeppelin/contracts/security/Pausable.sol";
 
-contract AFRXToken is ERC20Capped, ERC20Burnable, Ownable, ReentrancyGuard {
+contract AFRXToken is ERC20Capped, AccessControl, ReentrancyGuard, Pausable {
     using SafeMath for uint256;
+
+    // Define roles
+    bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
+    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
     // Events
     event TokensIssued(address indexed investor, uint256 amount, string jurisdiction);
@@ -32,13 +36,17 @@ contract AFRXToken is ERC20Capped, ERC20Burnable, Ownable, ReentrancyGuard {
     // Immutable Constants
     uint256 public immutable TOKEN_DECIMALS = 18;
     uint256 public immutable MAX_SUPPLY = 5_770_000_000 * (10 ** TOKEN_DECIMALS); // 5.77 billion AFRX tokens
-    uint256 public immutable LOCKUP_PERIOD = 365 days;
+    uint256 public immutable LOCKUP_PERIOD = 180 days; // Updated to 6 months
 
     // Constructor
-    constructor() ERC20("AfrailX Security Token", "AFRX") ERC20Capped(MAX_SUPPLY) {}
+    constructor() ERC20("AfrailX Security Token", "AFRX") ERC20Capped(MAX_SUPPLY) {
+        // Grant roles to deployer
+        _setupRole(ADMIN_ROLE, msg.sender);
+        _setupRole(MINTER_ROLE, msg.sender);
+    }
 
     // Minting function
-    function issueTokens(address investor, uint256 amount, string memory jurisdiction) external onlyOwner {
+    function issueTokens(address investor, uint256 amount, string memory jurisdiction) external onlyRole(MINTER_ROLE) whenNotPaused {
         require(totalSupply().add(amount) <= cap(), "Cap exceeded");
         require(_isJurisdictionAllowed(jurisdiction), "Jurisdiction not allowed");
         _mint(investor, amount);
@@ -54,7 +62,7 @@ contract AFRXToken is ERC20Capped, ERC20Burnable, Ownable, ReentrancyGuard {
         emit TokensIssued(investor, amount, jurisdiction);
     }
 
-    function _beforeTokenTransfer(address from, address to, uint256 amount) internal override {
+    function _beforeTokenTransfer(address from, address to, uint256 amount) internal override whenNotPaused {
         if (from != address(0)) {
             require(_investors[from].isWhitelisted, "Sender not whitelisted");
             require(_investors[to].isWhitelisted, "Recipient not whitelisted");
@@ -64,7 +72,7 @@ contract AFRXToken is ERC20Capped, ERC20Burnable, Ownable, ReentrancyGuard {
         super._beforeTokenTransfer(from, to, amount);
     }
 
-    function whitelistInvestor(address investor, string memory jurisdiction) external onlyOwner {
+    function whitelistInvestor(address investor, string memory jurisdiction) external onlyRole(ADMIN_ROLE) {
         require(_isJurisdictionAllowed(jurisdiction), "Jurisdiction not allowed");
         _investors[investor].isWhitelisted = true;
         _investors[investor].jurisdiction = jurisdiction;
@@ -72,20 +80,20 @@ contract AFRXToken is ERC20Capped, ERC20Burnable, Ownable, ReentrancyGuard {
         emit InvestorWhitelisted(investor, jurisdiction);
     }
 
-    function removeFromWhitelist(address investor) external onlyOwner {
+    function removeFromWhitelist(address investor) external onlyRole(ADMIN_ROLE) {
         _investors[investor].isWhitelisted = false;
 
         emit InvestorRemovedFromWhitelist(investor);
     }
 
-    function addJurisdiction(string memory jurisdiction) external onlyOwner {
+    function addJurisdiction(string memory jurisdiction) external onlyRole(ADMIN_ROLE) {
         bytes32 j = keccak256(abi.encodePacked(jurisdiction));
         allowedJurisdictions[j] = true;
 
         emit JurisdictionAdded(jurisdiction);
     }
 
-    function removeJurisdiction(string memory jurisdiction) external onlyOwner {
+    function removeJurisdiction(string memory jurisdiction) external onlyRole(ADMIN_ROLE) {
         bytes32 j = keccak256(abi.encodePacked(jurisdiction));
         allowedJurisdictions[j] = false;
 
@@ -112,5 +120,14 @@ contract AFRXToken is ERC20Capped, ERC20Burnable, Ownable, ReentrancyGuard {
     function _isJurisdictionAllowed(string memory jurisdiction) internal view returns (bool) {
         bytes32 j = keccak256(abi.encodePacked(jurisdiction));
         return allowedJurisdictions[j];
+    }
+
+    // Emergency pause functionality
+    function pause() external onlyRole(ADMIN_ROLE) {
+        _pause();
+    }
+
+    function unpause() external onlyRole(ADMIN_ROLE) {
+        _unpause();
     }
 }
