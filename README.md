@@ -5,7 +5,7 @@ Smart contract implementation for the **AFRX Security Token**, based on the [ERC
 ## Project Links
 
 - [AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRX_Token_White_Paper.pdf)
-- [UPDATED AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRX_White_Paper_v1_4_May2025.pdf)
+- [Updated AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/Updated_AFRX_White_Paper_v1_4_May2025.pdf)
 
 ## Overview
 
