@@ -1,3 +1,10 @@
+// SPDX-License-Identifier: MIT
+// AFRXToken_legacy.sol
+// Archived legacy version of the AFRX Security Token smart contract.
+// Note: Superseded by AFRXToken.sol v1.1 due to enhancements in compliance and dividend distribution mechanisms.
+
+pragma solidity ^0.8.0;
+
 // SPDX-License-Identifier: MIT pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol"; import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol"; import "@openzeppelin/contracts/security/Pausable.sol"; import "@openzeppelin/contracts/access/AccessControl.sol"; import "@openzeppelin/contracts/security/ReentrancyGuard.sol"; import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Snapshot.sol"; import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol"; import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
