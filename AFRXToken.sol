@@ -1,3 +1,12 @@
+// SPDX-License-Identifier: MIT
+// AFRXToken.sol
+// Version: 1.1
+// Production version of the AFRX Security Token smart contract.
+// Features: Snapshot-based dividends, 365-day lockup, KYC/AML compliance, buyback and burn, UUPS upgradeability.
+// Compliant with SEC Regulation D Rule 506(c) and Regulation S.
+
+pragma solidity ^0.8.20;
+
 // SPDX-License-Identifier: MIT pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol"; import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol"; import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Snapshot.sol"; import "@openzeppelin/contracts/security/Pausable.sol"; import "@openzeppelin/contracts/security/ReentrancyGuard.sol"; import "@openzeppelin/contracts/access/AccessControl.sol"; import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
