@@ -1,70 +1,55 @@
-afrx-security-token
+# afrx-security-token
 
-Smart contract implementation for the AFRX Security Token, built on the ERC-3643 standard (formerly ERC-1400), incorporating enhanced compliance, upgradeability, and snapshot-based dividend distribution.
+Smart contract implementation for the **AFRX Security Token**, built on the [ERC-3643](https://docs.tokeny.com/technical/erc3643-standard) standard (formerly ERC-1400), incorporating enhanced compliance, upgradeability, and snapshot-based dividend distribution.
 
-Project Links
+## Project Links
 
-AFRX Token White Paper (PDF)
+- [AFRXToken.sol (Production Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/contracts/AFRXToken.sol)
+- [AFRXToken_legacy.sol (Archived Legacy Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/contracts/AFRXToken_legacy.sol)
+- [AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRX_Token_White_Paper.pdf)
+- [Updated AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/Updated_AFRX_White_Paper_v1_4_May2025.pdf)
+- [CHANGELOG.md](https://github.com/afrail-inc/afrx-security-token/blob/main/CHANGELOG.md)
 
-Updated AFRX Token White Paper (PDF)
+## Overview
 
+AFRX is a fully compliant security token issued by Afrail Inc., designed for global investor participation under **Regulation D Rule 506(c)** and **Regulation S**. This smart contract incorporates:
 
-Overview
+- On-chain jurisdiction control  
+- Whitelisting/KYC enforcement  
+- Dividend claims by snapshot  
+- Buyback & burn mechanics  
+- UUPS upgradeable proxy architecture  
 
-AFRX is a fully compliant security token issued by Afrail Inc., designed for global investor participation under Regulation D Rule 506(c) and Regulation S. This smart contract incorporates:
+## Features
 
-On-chain jurisdiction control
+- ERC-3643 Compliance (built on ERC-1400 base)  
+- On-chain KYC/AML and jurisdiction whitelisting  
+- 365-day lockup enforcement per investor  
+- Snapshot-based dividend distribution (`ERC20Snapshot`)  
+- Dividend claim function with double-claim protection  
+- Token buyback and burn mechanism  
+- Role-based access control (`AccessControl`)  
+- UUPS upgradeable architecture  
+- Emergency pause/unpause functionality  
 
-Whitelisting/KYC enforcement
-
-Dividend claims by snapshot
-
-Buyback & burn mechanics
-
-UUPS upgradeable proxy architecture
-
-
-Features
-
-ERC-3643 Compliance (built on ERC-1400 base)
-
-On-chain KYC/AML and jurisdiction whitelisting
-
-365-day lockup enforcement per investor
-
-Snapshot-based dividend distribution (ERC20Snapshot)
-
-Dividend claim function with double-claim protection
-
-Token buyback and burn mechanism
-
-Role-based access control (OpenZeppelin AccessControl)
-
-UUPS upgradeable architecture
-
-Emergency pause/unpause functionality
-
-
-Smart Contract Architecture
+## Smart Contract Architecture
 
 The AFRX Security Token is designed to meet enterprise and regulatory requirements under SEC Regulation D Rule 506(c) and Regulation S.
 
-Token Symbol: AFRX
+- **Token Symbol:** AFRX  
+- **Token Cap:** 5,770,000,000  
+- **Standard:** ERC-3643  
+- **Lockup Period:** 365 days  
+- **Compliance:** Jurisdiction + whitelist-based investor restrictions  
+- **Upgradeability:** Yes (via UUPS Proxy)  
+- **Audit Status:** Final audit pending (CertiK); Pre-reviewed by Okiki Omisande (CodeHawks, Immunefi)  
 
-Token Cap: 5,770,000,000
+## Contract Versions
 
-Standard: ERC-3643
+- **AFRXToken.sol** – Current production contract (v1.1) with enhanced compliance and dividend distribution.  
+- **AFRXToken_legacy.sol** – Archived legacy contract retained for historical reference.  
 
-Lockup Period: 365 days
-
-Compliance: Jurisdiction + whitelist-based investor restrictions
-
-Upgradeability: Yes (via UUPS Proxy)
-
-Audit Status: Final audit pending (CertiK); Pre-reviewed by Okiki Omisande (CodeHawks, Immunefi)
-
-
-Usage Examples
+## Installation
 
 // Claim dividends for a round
 AFRXToken.claimDividends(roundId);
@@ -78,19 +63,30 @@ AFRXToken.whitelistInvestor(address, "United States");
 // Issue tokens to KYC'd investor
 AFRXToken.issueTokens(address, 1000 ether, "United States");
 
-## Contract Versions
+MIT License
 
-- **AFRXToken.sol** – Current production contract (v1.1) with enhanced compliance and dividend distribution.
-- **AFRXToken_legacy.sol** – Archived legacy contract retained for historical reference.
+Copyright (c) 2025 Afrail Inc.
 
-Installation
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights  
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
+copies of the Software, and to permit persons to whom the Software is  
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all  
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  
+SOFTWARE.
 
 Clone the repository:
 
+```bash
 git clone https://github.com/afrail-inc/afrx-security-token.git
 cd afrx-security-token
-
-License
-
-MIT License
-
