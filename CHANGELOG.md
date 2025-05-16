@@ -2,11 +2,13 @@ afrx-security-token
 
 Smart contract implementation for the AFRX Security Token, built on the ERC-3643 standard (formerly ERC-1400), incorporating enhanced compliance, upgradeability, and snapshot-based dividend distribution.
 
-Project Links
 
-AFRX Token White Paper (PDF)
+## Project Links
 
-Updated AFRX Token White Paper (PDF)
+- [AFRXToken.sol (Production Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRXToken.sol)
+- [AFRXToken_legacy.sol (Archived Legacy Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRXToken_legacy.sol)
+- [Updated White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/Updated_AFRX_White_Paper_v1_4_May2025.pdf)
+- [Repository](https://github.com/afrail-inc/afrx-security-token)
 
 
 Overview
