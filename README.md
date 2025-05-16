@@ -78,6 +78,11 @@ AFRXToken.whitelistInvestor(address, "United States");
 // Issue tokens to KYC'd investor
 AFRXToken.issueTokens(address, 1000 ether, "United States");
 
+## Contract Versions
+
+- **AFRXToken.sol** – Current production contract (v1.1) with enhanced compliance and dividend distribution.
+- **AFRXToken_legacy.sol** – Archived legacy contract retained for historical reference.
+
 Installation
 
 Clone the repository:
