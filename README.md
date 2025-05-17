@@ -5,9 +5,9 @@ Smart contract implementation for the **AFRX Security Token**, built on the [ERC
 ## Project Links
 
 - [AFRXToken.sol (Production Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRXToken.sol)
-- [AFRXToken_legacy.sol (Archived Legacy Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRXToken_legacy.sol)
-- [AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRX_Token_White_Paper.pdf)
-- [Updated AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/Updated_AFRX_White_Paper_v1_4_May2025.pdf)
+- [AFRXToken_legacy.sol (Archived Legacy Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRXToken_legacy.sol)
+- [AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRX_Token_White_Paper.pdf)
+- [Updated AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/Updated_AFRX_White_Paper_v1_4_May2025.pdf)
 - [CHANGELOG.md](https://github.com/afrail-inc/afrx-security-token/blob/main/CHANGELOG.md)
 - [AFRX Dividend Distribution FAQ](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRX_Dividend_FAQ.md)
 
