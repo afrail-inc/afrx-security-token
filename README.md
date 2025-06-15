@@ -46,6 +46,40 @@ The AFRX Security Token is designed to meet enterprise and regulatory requiremen
 - **Upgradeability:** Yes (via UUPS Proxy)  
 - **Audit Status:** Final audit pending (CertiK); Pre-reviewed by Okiki Omisande (CodeHawks, Immunefi)  
 
+## 🔐 Section 7: Proceeds Management and Escrow Strategy
+
+All cash proceeds from the sale of AFRX Security Tokens will be paid directly into a regulated **Escrow Account** upon commencement of token production and sale. This structure ensures:
+
+- ✅ Transparency  
+- ✅ Investor protection  
+- ✅ Regulatory and compliance assurance  
+
+Afrail Inc. **will not have access to these funds** until a minimum capital raise threshold is met.
+
+### 🎯 Minimum Raise Requirement
+
+To unlock funds from the escrow:
+
+- **Target Raise:** $4.039 billion USD  
+- **Minimum Threshold (10%):** $403.9 million USD  
+
+Once 10% is raised and verified, Afrail Inc. may begin drawing down funds in accordance with an approved use-of-funds schedule.
+
+### 🏗️ Bridge Financing for Early Operations
+
+Before reaching 10%, Afrail Inc. will pursue **short-term, low-interest loans backed by the escrow balance**, for:
+
+- 🏙️ Pre-engineering in **South Florida**  
+- 🌍 Site preparation in **Northern Namibia**
+
+This enables early progress while maintaining responsible financial safeguards.
+
+### ✅ Benefits of This Structure
+
+- ⚖️ **Investor Assurance:** No premature access to capital  
+- 🔐 **Compliance:** Aligned with security token regulatory best practices  
+- 🚀 **Readiness:** Enables engineering momentum with escrow-backed credibility
+
 ## Contract Versions
 
 - **AFRXToken.sol** – Current production contract (v1.1) with enhanced compliance and dividend distribution.  
@@ -53,16 +87,16 @@ The AFRX Security Token is designed to meet enterprise and regulatory requiremen
 
 ## Installation
 
-// Claim dividends for a round
+// Claim dividends for a round  
 AFRXToken.claimDividends(roundId);
 
-// Admin distributes dividends (snapshot is auto-generated)
+// Admin distributes dividends (snapshot is auto-generated)  
 AFRXToken.distributeDividends(totalAmount);
 
-// Add investor to whitelist
+// Add investor to whitelist  
 AFRXToken.whitelistInvestor(address, "United States");
 
-// Issue tokens to KYC'd investor
+// Issue tokens to KYC'd investor  
 AFRXToken.issueTokens(address, 1000 ether, "United States");
 
 MIT License
