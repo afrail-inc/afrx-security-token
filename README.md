@@ -11,6 +11,7 @@ Smart contract implementation for the **AFRX Security Token**, built on the [ERC
 - [CHANGELOG.md](https://github.com/afrail-inc/afrx-security-token/blob/main/CHANGELOG.md)
 - [AFRX Dividend Distribution FAQ](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRX_Dividend_FAQ.md)
 - [SECURITY.md](https://github.com/afrail-inc/afrx-security-token/blob/main/SECURITY.md)
+- [Section 7: Proceeds Management and Escrow Strategy](#-section-7-proceeds-management-and-escrow-strategy)
 
 ## Overview
 
