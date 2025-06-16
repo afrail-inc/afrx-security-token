@@ -4,6 +4,19 @@ This document tracks all notable changes to the AFRX smart contract and related 
 
 ---
 
+## [v1.2] – June 2025
+
+**README and documentation updates for investor transparency and access.**
+
+### ✏️ Documentation
+- Added **Section 7: Proceeds Management and Escrow Strategy** to `README.md`
+- Linked Section 7 in the `Project Links` section of `README.md`
+- Corrected the **Dividend Distribution FAQ** link in `README.md`
+- Clarified public documentation scope in project description
+- Linked full documentation repository via banner and external updates
+
+---
+
 ## [v1.1] – May 2025
 
 **Production-ready release with enhanced compliance, dividend distribution, and upgradeability.**
