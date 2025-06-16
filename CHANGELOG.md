@@ -15,6 +15,12 @@ This document tracks all notable changes to the AFRX smart contract and related 
 - Clarified public documentation scope in project description
 - Linked full documentation repository via banner and external updates
 
+### 🎨 Branding
+- Created `branding/` folder to host official AFRX token visual assets
+- Added `README.md` in `branding/` outlining usage guidance and contact
+- Uploaded mockup image of the AFRX token for investor decks, listings, and integrations
+- Updated main `README.md` to embed the token image for visual reference
+
 ---
 
 ## [v1.1] – May 2025
