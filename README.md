@@ -1,5 +1,9 @@
 # afrx-security-token
 
+<p align="center">
+  <img src="https://github.com/afrail-inc/afrx-security-token/raw/main/branding/AFRX Security Token Icon.jpg" alt="AFRX Token" width="200"/>
+</p>
+
 Smart contract implementation for the **AFRX Security Token**, built on the [ERC-3643](https://docs.tokeny.com/technical/erc3643-standard) standard (formerly ERC-1400), incorporating enhanced compliance, upgradeability, and snapshot-based dividend distribution.
 
 ## Project Links
@@ -12,6 +16,7 @@ Smart contract implementation for the **AFRX Security Token**, built on the [ERC
 - [AFRX Dividend Distribution FAQ](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRX_Dividend_FAQ.md)
 - [SECURITY.md](https://github.com/afrail-inc/afrx-security-token/blob/main/SECURITY.md)
 - [Section 7: Proceeds Management and Escrow Strategy](#-section-7-proceeds-management-and-escrow-strategy)
+- [AFRX Branding Assets](https://github.com/afrail-inc/afrx-security-token/tree/main/branding)
 
 ## Overview
 
@@ -88,6 +93,7 @@ This enables early progress while maintaining responsible financial safeguards.
 
 ## Installation
 
+```solidity
 // Claim dividends for a round  
 AFRXToken.claimDividends(roundId);
 
@@ -99,20 +105,23 @@ AFRXToken.whitelistInvestor(address, "United States");
 
 // Issue tokens to KYC'd investor  
 AFRXToken.issueTokens(address, 1000 ether, "United States");
+```
 
-MIT License
+## License
+
+MIT License  
 
 Copyright (c) 2025 Afrail Inc.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Clone the repository:
+## Clone the repository
 
 ```bash
 git clone https://github.com/afrail-inc/afrx-security-token.git
 cd afrx-security-token
+```
