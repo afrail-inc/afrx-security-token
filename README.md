@@ -1,5 +1,9 @@
 # afrx-security-token
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Built with Solidity](https://img.shields.io/badge/built%20with-Solidity-363636)
+![ERC-3643](https://img.shields.io/badge/ERC--3643-Compliant-brightgreen)
+
 <p align="center">
   <img src="https://github.com/afrail-inc/afrx-security-token/raw/main/branding/AFRX Security Token Icon.jpg" alt="AFRX Token" width="200"/>
 </p>
