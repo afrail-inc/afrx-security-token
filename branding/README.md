@@ -4,7 +4,7 @@ This folder contains the official design mockup of the AFRX Security Token.
 
 ## File
 
-- `afrx-token-mockup.png` – Gold coin visual used for presentation, media, and token listing previews.
+- `AFRX Security Token Icon` – Gold coin visual used for presentation, media, and token listing previews.
 
 ## Usage
 
