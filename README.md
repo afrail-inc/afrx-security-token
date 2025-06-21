@@ -5,7 +5,7 @@
 ![ERC-3643](https://img.shields.io/badge/ERC--3643-Compliant-brightgreen)
 
 <p align="center">
-  <img src="https://github.com/afrail-inc/afrx-security-token/raw/main/branding/AFRX Security Token Icon.jpg" alt="AFRX Token" width="200"/>
+  <img src="https://github.com/afrail-inc/afrx-security-token/raw/main/branding/afrx-token.jpg" alt="AFRX Token" width="200"/>
 </p>
 
 Smart contract implementation for the **AFRX Security Token**, built on the [ERC-3643](https://docs.tokeny.com/technical/erc3643-standard) standard (formerly ERC-1400), incorporating enhanced compliance, upgradeability, and snapshot-based dividend distribution.
