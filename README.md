@@ -54,7 +54,43 @@ The AFRX Security Token is designed to meet enterprise and regulatory requiremen
 - **Lockup Period:** 365 days  
 - **Compliance:** Jurisdiction + whitelist-based investor restrictions  
 - **Upgradeability:** Yes (via UUPS Proxy)  
-- **Audit Status:** Final audit pending (CertiK); Pre-reviewed by Okiki Omisande (CodeHawks, Immunefi)  
+- **Audit Status:** Final audit pending (CertiK); Pre-reviewed by Okiki Omisande (CodeHawks, Immunefi)
+
+## AFRX Token Design Description
+
+The AFRX Security Token is a digitally rendered, high-resolution gold token representing tokenized equity in **Afrail Inc.**, a smart infrastructure company. Its design is carefully crafted to reflect the values of **trust, innovation, compliance**, and **technological advancement**.
+
+### Key Visual Features
+
+**🔶 Gold Metallic Finish**  
+The entire token is rendered in a premium gold-toned finish, symbolizing durability, prestige, and value.
+
+**🔗 Circuit Pattern with Nodes**  
+The surface integrates a high-fidelity circuit pattern with noticeable connection nodes, illustrating blockchain connectivity, smart contract infrastructure, and digital security. This network-like motif reflects AFRX’s foundation on **ERC-3643**, a leading compliance token standard.
+
+**🛡️ Edge Text**  
+- **Top:** `AFRX`  
+- **Bottom:** `ERC-3643`  
+
+These inscriptions are arched along the outer rim of the token, precisely aligned to match the coin’s circular frame and visually balance its core elements.
+
+### Centered Symbol
+
+At the core of the AFRX token lies a **unique symbolic emblem**, merging identity and purpose:
+
+- **🔵 Circular Track Symbol**  
+  The centerpiece features a circular shape with a downward-pointing tail, representing the **elevated smart rail track** of Afrail, the urban mass transit system powered by AFRX. This symbolizes:
+  - Mobility with elevation  
+  - Forward movement and infrastructure growth  
+  - Urban transformation in targeted markets
+
+- **⏫ Vertical Twin Strokes**  
+  A top and bottom vertical stroke bisect the circular form, symbolizing strength, alignment, and direction — alluding to infrastructure pillars and technological symmetry.
+
+- **🔲 Square Dot Under the Tail**  
+  The tail of the track ends in a square dot, signifying foundation, structure, and programmable precision, alluding to smart contracts and blockchain finality.
+
+This emblem is **not a letter or character**, but a custom-designed insignia representing the AFRX token’s mission: to elevate Africa’s infrastructure through *regulated, tokenized equity*.
 
 ## 🔐 Section 7: Proceeds Management and Escrow Strategy
 
