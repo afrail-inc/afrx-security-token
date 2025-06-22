@@ -12,8 +12,9 @@ Smart contract implementation for the **AFRX Security Token**, built on the [ERC
 
 ## Project Links
 
-- [AFRXToken.sol (Production Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRXToken.sol)
-- [AFRXToken_legacy.sol (Archived Legacy Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRXToken_legacy.sol)
+- [AFRXTokenV1_18.sol (Production Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRXTokenV1_18.sol)
+- [AFRXToken.sol (Archived Prior Version)](https://github.com/afrail-inc/afrx-security-token/blob/main/contracts-archive/AFRXToken.sol)
+- [AFRXToken_legacy.sol (Older Archived Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRXToken_legacy.sol)
 - [AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRX_Token_White_Paper.pdf)
 - [Updated AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/Updated_AFRX_White_Paper_v1_4_May2025.pdf)
 - [AFRX Token Design Description](#afrx-token-design-description)
