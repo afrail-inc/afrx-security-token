@@ -54,7 +54,7 @@ constructor() initializer {}
 function initialize(address admin, address _treasury) public initializer {
     require(_treasury != address(0), "Treasury address required");
 
-    __ERC20_init("AfrailX Security Token", "AFRX");
+    __ERC20_init("Afrail Security Token", "AFRX");
     __ERC20Capped_init(5_770_000_000 * (10 ** TOKEN_DECIMALS));
     __ERC20Burnable_init();
     __ERC20Snapshot_init();
