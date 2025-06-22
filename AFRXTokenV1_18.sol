@@ -94,5 +94,141 @@ function issueTokens(address investor, uint256 amount, string memory jurisdictio
     emit TokensIssued(investor, amount, jurisdiction);
 }
 
-function batchIssueTokens(address[] calldata investors, uint256[] calldata
+function batchIssueTokens(address[] calldata investors, uint256[] calldata amounts, string[] calldata jurisdictions)
+    external
+    onlyRole(MINTER_ROLE)
+    whenNotPaused
+{
+    require(investors.length == amounts.length && amounts.length == jurisdictions.length, "Array lengths mismatch");
+    for (uint256 i = 0; i < investors.length; ++i) {
+        issueTokens(investors[i], amounts[i], jurisdictions[i]);
+    }
+}
+
+function distributeDividends(uint256 totalAmount) external onlyRole(ADMIN_ROLE) nonReentrant whenNotPaused {
+    require(totalSupply() > 0, "No tokens in circulation");
+    require(treasury != address(0), "Treasury not set");
+    require(balanceOf(treasury) >= totalAmount, "Insufficient treasury balance");
+
+    uint256 snapshotId = _snapshot();
+    uint256 snapshotSupply = totalSupply() - balanceOf(address(this));
+
+    _transfer(treasury, address(this), totalAmount);
+
+    dividendInfo[currentDividendRound] = DividendInfo({
+        totalAmount: totalAmount,
+        snapshotId: snapshotId,
+        totalSupplyAtSnapshot: snapshotSupply,
+        reclaimedAmount: 0
+    });
+
+    snapshotTimestamps[snapshotId] = block.timestamp;
+
+    emit DividendsAvailable(currentDividendRound, totalAmount);
+    currentDividendRound++;
+}
+
+function claimDividends(uint256 roundId) external nonReentrant whenNotPaused onlyWhitelisted(msg.sender) {
+    require(!dividendsClaimed[roundId][msg.sender], "Already claimed");
+
+    DividendInfo storage dividend = dividendInfo[roundId];
+    uint256 balance = balanceOfAt(msg.sender, dividend.snapshotId);
+    require(balance > 0, "No tokens at snapshot");
+
+    uint256 share = (balance * dividend.totalAmount) / dividend.totalSupplyAtSnapshot;
+    require(share > 0, "No dividends to claim");
+
+    dividendsClaimed[roundId][msg.sender] = true;
+    _transfer(address(this), msg.sender, share);
+
+    emit DividendsClaimed(roundId, msg.sender, share);
+}
+
+function reclaimUnclaimedDividends(uint256 roundId, address to) external onlyRole(ADMIN_ROLE) {
+    require(block.timestamp > snapshotTimestamps[dividendInfo[roundId].snapshotId] + 365 days, "Too early to reclaim");
+    require(to != address(0), "Invalid address");
+
+    uint256 remaining = balanceOf(address(this));
+    dividendInfo[roundId].reclaimedAmount = remaining;
+    _transfer(address(this), to, remaining);
+
+    emit DividendsReclaimed(roundId, remaining);
+}
+
+function releaseLockup(address investor) external onlyRole(ADMIN_ROLE) {
+    _investors[investor].releaseTime = block.timestamp;
+    emit LockupReleased(investor);
+}
+
+function toggleTestMode(bool status) external onlyRole(ADMIN_ROLE) {
+    isTestMode = status;
+    emit TestModeToggled(status);
+}
+
+function whitelistInvestor(address investor, string memory jurisdiction) external onlyRole(ADMIN_ROLE) {
+    require(_isJurisdictionAllowed(jurisdiction), "Jurisdiction not allowed");
+    _investors[investor].isWhitelisted = true;
+    _investors[investor].jurisdiction = _normalizeString(jurisdiction);
+    emit InvestorWhitelisted(investor, jurisdiction);
+}
+
+function removeFromWhitelist(address investor) external onlyRole(ADMIN_ROLE) {
+    _investors[investor].isWhitelisted = false;
+    emit InvestorRemovedFromWhitelist(investor);
+}
+
+function addJurisdiction(string memory jurisdiction) external onlyRole(ADMIN_ROLE) {
+    bytes32 j = keccak256(abi.encodePacked(_normalizeString(jurisdiction)));
+    allowedJurisdictions[j] = true;
+    emit JurisdictionAdded(jurisdiction);
+}
+
+function removeJurisdiction(string memory jurisdiction) external onlyRole(ADMIN_ROLE) {
+    bytes32 j = keccak256(abi.encodePacked(_normalizeString(jurisdiction)));
+    allowedJurisdictions[j] = false;
+    emit JurisdictionRemoved(jurisdiction);
+}
+
+function pause(string memory reason) external onlyRole(PAUSER_ROLE) {
+    _pause();
+    emit ContractPaused(reason);
+}
+
+function unpause() external onlyRole(PAUSER_ROLE) {
+    _unpause();
+    emit ContractUnpaused();
+}
+
+function snapshot() external onlyRole(SNAPSHOT_ROLE) {
+    _snapshot();
+}
+
+function _authorizeUpgrade(address newImplementation) internal override onlyRole(UPGRADER_ROLE) {
+    emit Upgraded(newImplementation);
+}
+
+function _isJurisdictionAllowed(string memory jurisdiction) internal view returns (bool) {
+    bytes32 j = keccak256(abi.encodePacked(_normalizeString(jurisdiction)));
+    return allowedJurisdictions[j];
+}
+
+function _normalizeString(string memory str) internal pure returns (string memory) {
+    bytes memory bStr = bytes(str);
+    for (uint256 i = 0; i < bStr.length; i++) {
+        if ((uint8(bStr[i]) >= 65) && (uint8(bStr[i]) <= 90)) {
+            bStr[i] = bytes1(uint8(bStr[i]) + 32);
+        }
+    }
+    return string(bStr);
+}
+
+function decimals() public pure override returns (uint8) {
+    return TOKEN_DECIMALS;
+}
+
+function supportsInterface(bytes4 interfaceId) public view override(AccessControlUpgradeable) returns (bool) {
+    return super.supportsInterface(interfaceId);
+}
+
+}
 
