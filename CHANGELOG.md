@@ -4,6 +4,22 @@ This document tracks all notable changes to the AFRX smart contract and related 
 
 ---
 
+## [v1.3] – June 2025
+
+**README enhancements, token design documentation, and visual updates.**
+
+### ✏️ Documentation
+- Added **AFRX Token Design Description** section to `README.md` detailing symbolic elements, including the circuit pattern and centered emblem.
+- Included direct link to **AFRX Token Design Description** in the `Project Links` section.
+- Fixed broken external link to [ERC-3643](https://tokeny.com/erc3643/) in `README.md`.
+- Improved formatting of section headers and layout consistency.
+
+### 🎨 Branding
+- Uploaded a **new updated AFRX token design image** to the `branding/` directory.
+- Replaced older image reference in `README.md` with the latest visual asset to reflect final approved design.
+
+---
+
 ## [v1.2] – June 2025
 
 **README and documentation updates for investor transparency and access.**
