@@ -5,9 +5,23 @@ All notable changes to the AFRX Security Token smart contract repository will be
 
 ---
 
+[v1.18.2] – 2025-06-24
+
+*Changed*
+
+Replaced outdated README.md with updated full version including token design breakdown and corrected anchor links.
+
+Linked the official AFRX token image (branding/afrx-token.jpg) in both image display and internal documentation.
+
+Verified internal markdown anchors to ensure all Project Links route correctly to their sections.
+
+
+
+---
+
 [v1.18.1] – 2025-06-22
 
-Changed
+*Changed*
 
 Updated token name in AFRXTokenV1_18.sol from "AfrailX Security Token" to "Afrail Security Token" (line 57).
 
