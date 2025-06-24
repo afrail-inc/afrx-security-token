@@ -17,7 +17,7 @@ Smart contract implementation for the **AFRX Security Token**, built on the [ERC
 - [AFRXToken_legacy.sol (Older Archived Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRXToken_legacy.sol)
 - [AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRX_Token_White_Paper.pdf)
 - [Updated AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/Updated_AFRX_White_Paper_v1_4_May2025.pdf)
-- [AFRX Security Token – Official Token Design](#afrx-security-token-official-token-design)
+- [AFRX Security Token – Official Token Design](#afrx-security-token-official--token-design)
 - [CHANGELOG.md](https://github.com/afrail-inc/afrx-security-token/blob/main/CHANGELOG.md)
 - [AFRX Dividend Distribution FAQ](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRX_Dividend_FAQ.md)
 - [SECURITY.md](https://github.com/afrail-inc/afrx-security-token/blob/main/SECURITY.md)
@@ -58,7 +58,7 @@ The AFRX Security Token is designed to meet enterprise and regulatory requiremen
 - **Upgradeability:** Yes (via UUPS Proxy)  
 - **Audit Status:** Final audit pending (CertiK); Pre-reviewed by Okiki Omisande (CodeHawks, Immunefi)
 
-# 🎖 AFRX Security Token – Official Token Design
+## 🎖 AFRX Security Token – Official Token Design
 
 This image represents the official token design for the AFRX Security Token, issued by Afrail Inc. under the ERC-3643 standard. The design is not just symbolic — it encapsulates the token’s core attributes of compliance, programmability, and real-world equity backing.
 
