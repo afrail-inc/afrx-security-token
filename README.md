@@ -17,7 +17,7 @@ Smart contract implementation for the **AFRX Security Token**, built on the [ERC
 - [AFRXToken_legacy.sol (Older Archived Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRXToken_legacy.sol)
 - [AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRX_Token_White_Paper.pdf)
 - [Updated AFRX Token White Paper (PDF)](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/Updated_AFRX_White_Paper_v1_4_May2025.pdf)
-- [AFRX Token Design Description](#afrx-token-design-description)
+- [AFRX Security Token – Official Token Design](#afrx-security-token-official-token-design)
 - [CHANGELOG.md](https://github.com/afrail-inc/afrx-security-token/blob/main/CHANGELOG.md)
 - [AFRX Dividend Distribution FAQ](https://github.com/afrail-inc/afrx-security-token/blob/main/docs/AFRX_Dividend_FAQ.md)
 - [SECURITY.md](https://github.com/afrail-inc/afrx-security-token/blob/main/SECURITY.md)
@@ -58,41 +58,48 @@ The AFRX Security Token is designed to meet enterprise and regulatory requiremen
 - **Upgradeability:** Yes (via UUPS Proxy)  
 - **Audit Status:** Final audit pending (CertiK); Pre-reviewed by Okiki Omisande (CodeHawks, Immunefi)
 
-## AFRX Token Design Description
+# 🎖 AFRX Security Token – Official Token Design
 
-The AFRX Security Token is a digitally rendered, high-resolution gold token representing tokenized equity in **Afrail Inc.**, a smart infrastructure company. Its design is carefully crafted to reflect the values of **trust, innovation, compliance**, and **technological advancement**.
+This image represents the official token design for the AFRX Security Token, issued by Afrail Inc. under the ERC-3643 standard. The design is not just symbolic — it encapsulates the token’s core attributes of compliance, programmability, and real-world equity backing.
 
-### Key Visual Features
+**🔍 Token Design Breakdown:**
 
-**🔶 Gold Metallic Finish**  
-The entire token is rendered in a premium gold-toned finish, symbolizing durability, prestige, and value.
+Central Symbol (Modified **“a”** with Tail and Square Dot)
+The stylized central emblem is a unique take on the lowercase "a", referencing **Afrail Inc.** as the issuer.
 
-**🔗 Circuit Pattern with Nodes**  
-The surface integrates a high-fidelity circuit pattern with noticeable connection nodes, illustrating blockchain connectivity, smart contract infrastructure, and digital security. This network-like motif reflects AFRX’s foundation on **ERC-3643**, a leading compliance token standard.
+The vertical tail suggests directional innovation — **mobility** and **movement**.
 
-**🛡️ Edge Text**  
-- **Top:** `AFRX`  
-- **Bottom:** `ERC-3643`  
+The square dot beneath the tail represents **precision**, **order**, and **finality** — hallmarks of smart contract determinism and regulatory clarity.
 
-These inscriptions are arched along the outer rim of the token, precisely aligned to match the coin’s circular frame and visually balance its core elements.
+**Text Engraving:**
 
-### Centered Symbol
+Top Arc: **AFRX SECURITY TOKEN ERC-3643**
+This reinforces the token’s regulatory compliance as a tokenized security, adhering to globally recognized standards for permissioned tokens with KYC/AML layers.
 
-At the core of the AFRX token lies a **unique symbolic emblem**, merging identity and purpose:
+Bottom Arc: **BACKED BY REAL EQUITY IN AFRAIL INC**
+This line affirms that AFRX is not a utility token or speculative cryptocurrency. Each token is linked to actual equity held in Afrail Inc., providing *intrinsic value* and *real ownership*.
 
-- **🔵 Circular Track Symbol**  
-  The centerpiece features a circular shape with a downward-pointing tail, representing the **elevated smart rail track** of Afrail, the urban mass transit system powered by AFRX. This symbolizes:
-  - Mobility with elevation  
-  - Forward movement and infrastructure growth  
-  - Urban transformation in targeted markets
+Side Stars (at 9 and 3 o’clock)
+The symmetrical stars symbolize stability and compliance — referencing dual oversight: one by the issuer (Afrail Inc.), the other by regulatory frameworks. Their positioning balances the circular theme, reinforcing the idea of completeness and trust.
 
-- **⏫ Vertical Twin Strokes**  
-  A top and bottom vertical stroke bisect the circular form, symbolizing strength, alignment, and direction — alluding to infrastructure pillars and technological symmetry.
+**Gold Finish:**
+The gold coloration is deliberate — symbolizing:
 
-- **🔲 Square Dot Under the Tail**  
-  The tail of the track ends in a square dot, signifying foundation, structure, and programmable precision, alluding to smart contracts and blockchain finality.
+- Asset-backing
+- Investor-grade security
+- Long-term value
+  
+It visually separates AFRX from typical volatile tokens by emphasizing trust, regulation, and real equity.
 
-This emblem is **not a letter or character**, but a custom-designed insignia representing the AFRX token’s mission: to elevate Africa’s infrastructure through *regulated, tokenized equity*.
+**🛍 Purpose and Usage:**
+
+This token design should appear in all:
+
+- ✅ Official investor materials
+- ✅ Product whitepapers
+- ✅ Regulatory filings (visual representation)
+- ✅ Press releases
+- ✅ Token dashboards or portals (where graphical representations are supported)
 
 ## 🔐 Section 7: Proceeds Management and Escrow Strategy
 
