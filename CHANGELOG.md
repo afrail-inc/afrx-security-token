@@ -4,6 +4,14 @@ All notable changes to the AFRX Security Token smart contract repository will be
 
 ----------
 
+## [v1.18.4] – 2025-07-17
+
+### Updated
+
+-   `README.md`: Added prominent link at the top to `NOTICE.md` to clarify that ERC‑3643 is built on ERC‑20, not ERC‑1400.
+
+----------
+
 ## [v1.18.3] – 2025-07-17
 
 ### Added
@@ -76,3 +84,16 @@ Initial final-stage candidate before CertiK audit pass. Introduced:
 -   Structured investor lockup and jurisdiction enforcement.
 -   Basic dividend distribution via snapshots.
 -   Full OpenZeppelin upgradeable framework.
+
+----------
+
+## [v1.0.0] – 2025-05-26
+
+### Added
+
+-   Initial implementation of AFRX Security Token contract (ERC-3643 based)
+-   KYC/AML whitelisting framework via Tokeny and ONCHAINID integration
+-   Basic compliance modules: document linking, transfer validation, forced transfers
+-   Terms of Service, Tokenomics, Audit, and Legal documentation files
+-   Investor onboarding guides and full technical overview in `/docs`
+-   Initial `README.md` and licensing files
