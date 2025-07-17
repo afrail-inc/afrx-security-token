@@ -1,4 +1,4 @@
-# afrx-security-token
+# AFRX Security Token
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Built with Solidity](https://img.shields.io/badge/built%20with-Solidity-363636)
@@ -8,7 +8,7 @@
   <img src="https://github.com/afrail-inc/afrx-security-token/raw/main/branding/afrx-token.jpg" alt="AFRX Token" width="200"/>
 </p>
 
-Smart contract implementation for the **AFRX Security Token**, built on the [ERC-3643](https://tokeny.com/erc3643/) standard (formerly ERC-1400), incorporating enhanced compliance, upgradeability, and snapshot-based dividend distribution.
+Smart contract implementation for the **AFRX Security Token**, built on the [ERC-3643](https://tokeny.com/erc3643/) standard (ERC-20 base), incorporating enhanced compliance, upgradeability, and snapshot-based dividend distribution.
 
 ## Project Links
 
@@ -36,7 +36,7 @@ AFRX is a fully compliant security token issued by Afrail Inc., designed for glo
 
 ## Features
 
-- ERC-3643 Compliance (built on ERC-1400 base)  
+- ERC-3643 Compliance (built on ERC-20 base)  
 - On-chain KYC/AML and jurisdiction whitelisting  
 - 365-day lockup enforcement per investor  
 - Snapshot-based dividend distribution (`ERC20Snapshot`)  
@@ -73,11 +73,9 @@ The square dot beneath the tail represents **precision**, **order**, and **final
 
 **Text Engraving:**
 
-Top Arc: **AFRX SECURITY TOKEN ERC-3643**
-This reinforces the token’s regulatory compliance as a tokenized security, adhering to globally recognized standards for permissioned tokens with KYC/AML layers.
+Top Arc: **AFRX SECURITY TOKEN ERC-3643**: This reinforces the token’s regulatory compliance as a tokenized security, adhering to globally recognized standards for permissioned tokens with KYC/AML layers.
 
-Bottom Arc: **BACKED BY REAL EQUITY IN AFRAIL INC**
-This line affirms that AFRX is not a utility token or speculative cryptocurrency. Each token is linked to actual equity held in Afrail Inc., providing *intrinsic value* and *real ownership*.
+Bottom Arc: **BACKED BY REAL EQUITY IN AFRAIL INC**: This line affirms that AFRX is not a utility token or speculative cryptocurrency. Each token is linked to actual equity held in Afrail Inc., providing *intrinsic value* and *real ownership*.
 
 Side Stars (at 9 and 3 o’clock)
 The symmetrical stars symbolize stability and compliance — referencing dual oversight: one by the issuer (Afrail Inc.), the other by regulatory frameworks. Their positioning balances the circular theme, reinforcing the idea of completeness and trust.
