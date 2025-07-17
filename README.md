@@ -10,6 +10,8 @@
 
 Smart contract implementation for the **AFRX Security Token**, built on the [ERC-3643](https://tokeny.com/erc3643/) standard (ERC-20 base), incorporating enhanced compliance, upgradeability, and snapshot-based dividend distribution.
 
+> 📌 **Important Notice:** Please see [NOTICE.md](./NOTICE.md) for technical clarification on ERC‑3643 vs ERC‑1400.
+
 ## Project Links
 
 - [AFRXTokenV1_18.sol (Production Contract)](https://github.com/afrail-inc/afrx-security-token/blob/main/AFRXTokenV1_18.sol)
